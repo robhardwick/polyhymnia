@@ -1,0 +1,14 @@
+[package]
+name = "libpoly"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+libm = "0.2.6"
+rand = { version = "0.8.5", default-features = false, features = ["small_rng"] }
+
+[target.'cfg(target_os = "none")'.dependencies]
+defmt = "0.3.2"
+
+[target.'cfg(not(target_os = "none"))'.dependencies]
+log = "0.4.17"

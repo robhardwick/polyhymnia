@@ -1,0 +1,16 @@
+[workspace]
+members = [
+    "libpoly",
+    "bin-macos",
+    "bin-rp2040"
+]
+default-members = ["bin-macos"]
+
+
+[profile.release.package.bin-rp2040]
+codegen-units = 1
+debug = 2
+debug-assertions = false
+incremental = false
+opt-level = 3
+overflow-checks = false
